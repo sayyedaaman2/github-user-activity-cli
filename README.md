@@ -1,7 +1,6 @@
 # GitHub User Activity CLI
 
 A simple command-line tool to fetch and display a GitHub user's recent public activity.
-[roadmap](https://roadmap.sh/projects/github-user-activity)
 
 ## Features
 - Fetches the latest public events for any GitHub user.
@@ -35,21 +34,12 @@ Enter the GitHub username: sayyedaaman2
 Pushed 3 commits to sayyedaaman2/task-tracker-cli
 Opened a new issue in kamranahmedse/developer-roadmap
 Starred kamranahmedse/developer-roadmap
+Performed ForkEvent on some-repo
 ```
 
 ## API Rate Limits
 - GitHub imposes rate limits on unauthenticated API requests.
-- To avoid hitting the limit, use authentication by setting a **GitHub token** in an environment variable:
-  ```sh
-  export GITHUB_TOKEN=your_personal_access_token
-  ```
-  Then modify the script to include:
-  ```js
-  const headers = {
-      "Authorization": `token ${process.env.GITHUB_TOKEN}`,
-      "User-Agent": "github-user-activity-cli"
-  };
-  ```
+- If you hit the rate limit, try again later or use a different network.
 
 ## License
 This project is licensed under the MIT License.
